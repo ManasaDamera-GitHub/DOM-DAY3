@@ -1,7 +1,7 @@
 let btn = document.getElementById("btn")
 btn.addEventListener("click", async () => {
     console.log("Getting the data.......please wait")
-    let response = await fetch("http://localhost:5000/products")
+    let response = await fetch("https://manasadamera-github.github.io/DOM-DAY3/db.json")
     try {
         if (!response.ok) {
             throw new Error(response.statusText)
@@ -34,7 +34,7 @@ function displayData(data) {
 async function deleteItem(id, item) {
     try {
         // Send DELETE request to the server
-        const response = await fetch(`http://localhost:5000/products/${id}`, {
+        const response = await fetch(`https://manasadamera-github.github.io/DOM-DAY3/db.json/${id}`, {
             method: 'DELETE',
         });
 
