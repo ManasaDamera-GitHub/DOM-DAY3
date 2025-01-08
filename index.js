@@ -1,7 +1,7 @@
 let btn = document.getElementById("btn")
 btn.addEventListener("click", async () => {
     console.log("Getting the data.......please wait")
-    let response = await fetch("http://localhost:5000/products")
+    let response = await fetch("https://manasadamera-github.github.io/DOM-DAY3/db.json")
     try {
         if (!response.ok) {
             throw new Error(response.statusText)
